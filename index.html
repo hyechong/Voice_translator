@@ -36,7 +36,12 @@
         </div>
 
         <div class="lang-from lang-box">
-          <textarea placeholder="한국어 음성을 입력해 주세요."></textarea>
+          <textarea placeholder="한국어 음성을 입력해 주세요." id="search_console"></textarea>
+        </div>
+
+        <div class="voice-btns">
+          <button class="v-start" onclick="startRecord()">시작</button>
+          <button class="v-end" onclick="endRecord()">멈춤</button>
         </div>
 
         <div class="switch-btns-wrapper">
@@ -48,20 +53,26 @@
         </div>
 
         <div class="lang-to lang-box">
-          <textarea placeholder="영어로 번역됩니다."></textarea>
+          <textarea placeholder="영어로 번역됩니다." id="text"></textarea>
+          <div class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
         </div>
 
         <div class="result-btns-box">
           <div class="result-btns">
             <button class="translate">번역</button>
-            <button>읽기</button>
+            <button class="read-text">읽기</button>
           </div>
         </div>
 
         <footer>
           <div class="footer-contents">
             <p>언어를 바꿀 경우 초기화 해주세요.</p>
-            <button>초기화</button>
+            <button class="reset-btn">초기화</button>
           </div>
         </footer>
       </div>
