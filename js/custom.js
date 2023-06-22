@@ -1,4 +1,6 @@
 // 번역 API Document : https://mymemory.translated.net/
+// 번역이 불안정함 : 유료 api(인공지능)으로 전환하여 해결 - 무료로는 파파고를 많이 사용
+// 모바일에서 구동 시 설정 언어 변경 불가능 : 앱 개발을 통해 네이티브 기능을 수정할 수 있음
 
 const requestUrl = 'https://api.mymemory.translated.net/get?q=';
 
@@ -84,8 +86,15 @@ const searchConsole = document.getElementById('search_console');
 // ----- 현재 브라우저에서 API 사용이 유효한가를 검증
 function availabilityFunc() {
   //현재 SpeechRecognition을 지원하는 크롬 버전과 webkit 형태로 제공되는 버전이 있으므로 둘 중 해당하는 생성자를 호출한다.
+  const switchBtn = document.querySelector('.switch-btns');
+
+  switchBtn.addEventListener('click', function () {
+    const pair = document.querySelector('.from').getAttribute('value');
+    recognition.lang = pair; // 음성인식에 사용되고 반환될 언어를 설정한다.
+    console.log(pair);
+  });
+
   recognition = new webkitSpeechRecognition() || new SpeechRecognition();
-  recognition.lang = 'ko'; // 음성인식에 사용되고 반환될 언어를 설정한다.
   recognition.maxAlternatives = 5; //음성 인식결과를 5개 까지 보여준다.
 
   if (!recognition) {
