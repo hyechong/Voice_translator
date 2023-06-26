@@ -31,10 +31,12 @@ img{display: block;}
 .wrapper header{border-bottom: 1px solid var(--color-border);}
 
 /* Select Button Style */
+section{background: var(--color-dark);}
 section .container{padding-top: 0; padding-bottom: 0;}
 section .select-lang{width: 100%; height: auto; padding: var(--el-25);}
 section .select-lang h3{padding: var(--el-100) 0; background: var(--color-bright); color: var(--color-dark); font-weight: 400; font-size: 1rem;}
-section .select-btns{width: 100%; height: auto; padding: var(--el-100) 0; border: 1px solid var(--color-border); margin-top: var(--el-50); display: flex; justify-content: space-evenly;}section .select-btns button{width: 23%; padding: var(--el-100) 0; border: 1px solid var(--color-border);}
+section .select-btns{width: 100%; height: auto; padding: var(--el-100) 0; border: 1px solid var(--color-border); margin-top: var(--el-50); display: flex; justify-content: space-evenly;}
+section .select-btns button{width: 23%; padding: var(--el-100) 0; border: 1px solid var(--color-border); color: var(--color-dark);}
 section .select-btns button.active{background: var(--color-dark); color: var(--color-bright);}
 
 /* Voice Input and Translated Input Box Style */
@@ -54,9 +56,9 @@ section .result-btns button,
 section .voice-btns button{width: 48%; padding: var(--el-100) 0; background: var(--color-bright ); color: var(--color-dark);}
 
 /* Footer Style */
-footer{width: 100%; height: auto; padding: var(--el-100) 0; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); margin-top: var(--el-50);}
+footer{width: 100%; height: auto; padding: var(--el-100) 0; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); margin-top: var(--el-50); background: var(--color-dark);}
 footer .footer-contents{width: 100%; height: auto; padding: 0 var(--el-100); display: flex; justify-content: space-evenly; _border-right: 1px solid var(--color-border); _border-left: 1px solid var(--color-border); align-items: center;}
-footer button{padding: 1rem 2rem;}
+footer button{padding: 1rem 2rem; color: var(--color-dark);}
 
 /* Loading Ring Style */
 .lds-ring {position: absolute; left:50%; top:50%; transform:translate(-50%, -50%); width: 80px; height: 80px; display:none; align-items: center; justify-content: center;}
