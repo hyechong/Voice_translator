@@ -5,9 +5,11 @@
 
   $from = $_GET['from'];
   $to = $_GET['to'];
+
   $txt = $_GET['txt'];
+  $decodeTxt = urldecode($txt);
   
-  $encText = urlencode($txt);
+  $encText = urlencode($decodeTxt);
   $postvars = "source=".$from."&target=".$to."&text=".$encText;
   $url = "https://openapi.naver.com/v1/papago/n2mt";
   $is_post = true;
